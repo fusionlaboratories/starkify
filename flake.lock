@@ -1,5 +1,22 @@
 {
   "nodes": {
+    "cairo-lang": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1670173208,
+        "narHash": "sha256-X7FSEtCdE4ZGiTKTNDDpaEGLkJJK46SbkcD73htc5YI=",
+        "owner": "starkware-libs",
+        "repo": "cairo-lang",
+        "rev": "de741b92657f245a50caab99cfaef093152fd8be",
+        "type": "github"
+      },
+      "original": {
+        "owner": "starkware-libs",
+        "ref": "v0.10.3",
+        "repo": "cairo-lang",
+        "type": "github"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -32,6 +49,24 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "inclusive": {
+      "inputs": {
+        "stdlib": "stdlib"
+      },
+      "locked": {
+        "lastModified": 1628098927,
+        "narHash": "sha256-Ft4sdf7VPL8MQtu18AAPiN2s5pUsbv+3RxqzJSa/yzg=",
+        "owner": "input-output-hk",
+        "repo": "nix-inclusive",
+        "rev": "13123eb7a8c3359738a4756b8d645729e8655b27",
+        "type": "github"
+      },
+      "original": {
+        "owner": "input-output-hk",
+        "repo": "nix-inclusive",
         "type": "github"
       }
     },
@@ -100,7 +135,9 @@
     },
     "root": {
       "inputs": {
+        "cairo-lang": "cairo-lang",
         "flake-parts": "flake-parts",
+        "inclusive": "inclusive",
         "miden-vm": "miden-vm",
         "nixpkgs": "nixpkgs",
         "rust-overlay": "rust-overlay"
@@ -122,6 +159,21 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "stdlib": {
+      "locked": {
+        "lastModified": 1590026685,
+        "narHash": "sha256-E5INrVvYX/P/UpcoUFDAsuHem+lsqT+/teBs9O7oc9Q=",
+        "owner": "manveru",
+        "repo": "nix-lib",
+        "rev": "99088cf7febcdb21afd375a335dcafa959bef3ed",
+        "type": "github"
+      },
+      "original": {
+        "owner": "manveru",
+        "repo": "nix-lib",
         "type": "github"
       }
     },
