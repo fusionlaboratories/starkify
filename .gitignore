@@ -7,3 +7,6 @@
 archive/*
 db/dev/google_analytics/client_secret.json
 dist-newstyle/
+
+# direnv
+.direnv
