@@ -28,9 +28,10 @@
         # 2. Add foo as a parameter to the outputs function
         # 3. Add here: foo.flakeModule
         inputs.devenv.flakeModule
+        ./nix/docker-module.nix
       ];
 
-      systems = ["aarch64-darwin"];
+      systems = ["aarch64-linux" "aarch64-darwin"];
 
       perSystem = {
         config,
