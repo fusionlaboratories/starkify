@@ -9,6 +9,7 @@
     miden-vm.flake = false;
     cairo-lang.url = "github:starkware-libs/cairo-lang/v0.10.3";
     cairo-lang.flake = false;
+    devenv.url = "github:cachix/devenv"; 
   };
 
   outputs = inputs@{ self, flake-parts, rust-overlay, miden-vm, inclusive, cairo-lang, ... }:
@@ -18,7 +19,7 @@
         # 1. Add foo to inputs
         # 2. Add foo as a parameter to the outputs function
         # 3. Add here: foo.flakeModule
-
+        inputs.devenv.flakeModule
       ];
 
       systems = [ "aarch64-darwin" ];
@@ -92,28 +93,24 @@
           postInstall = ''
             chmod +x $out/bin/*
           '';
-        };       
+        };
 
-        devShells.default = pkgs.mkShell {
-          name = "starkify";
-
-          buildInputs = (with pkgs; [
+        devenv.shells.default = {
+          packages = with pkgs; [
             llvmPackages_14.clang
             llvmPackages_14.libllvm
             lld_14
             cabal-install
             wabt
             wasmtime
-          ]) ++
-          (with self'.packages; [
+          ] ++ (with self'.packages; [
             miden
             rust
             ghc
             cairo-lang
-          ]);
-
+          ])
+          ;
         };
-
       };
 
       flake = {
