@@ -163,14 +163,18 @@
     "miden-vm": {
       "flake": false,
       "locked": {
-        "lastModified": 1682617116,
-        "narHash": "sha256-T34K4tPMWfEU/3bZuavZQjgAvKbsbMZq4CYEzXA+ggM=",
-        "path": "/Users/jakub.zalewski/Developer/miden-vm",
-        "type": "path"
+        "lastModified": 1683569868,
+        "narHash": "sha256-+VJlsDvHlMcCehlwT+B4FR/Y76dS3Vyyh0XUt/ijw8Y=",
+        "owner": "qredek",
+        "repo": "miden-vm",
+        "rev": "aaec8f40602a26bf936703075cffb22a482fd5b8",
+        "type": "github"
       },
       "original": {
-        "path": "/Users/jakub.zalewski/Developer/miden-vm",
-        "type": "path"
+        "owner": "qredek",
+        "ref": "add-exitcodes",
+        "repo": "miden-vm",
+        "type": "github"
       }
     },
     "nix": {

@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     rust-overlay.url = "github:oxalica/rust-overlay";
     inclusive.url = "github:input-output-hk/nix-inclusive";
-    miden-vm.url = "/Users/jakub.zalewski/Developer/miden-vm";
+    miden-vm.url = "github:qredek/miden-vm/add-exitcodes";
     miden-vm.flake = false;
     cairo-lang.url = "github:starkware-libs/cairo-lang/v0.10.3";
     cairo-lang.flake = false;
@@ -60,7 +60,7 @@
           nativeBuildInputs = [self'.packages.rust];
           doCheck = false;
           cargoLock = {
-            lockFile = ./Cargo.lock;
+            lockFile = "${miden-vm}/Cargo.lock";
           };
         };
 
