@@ -145,6 +145,7 @@
               cabal-install
               wabt
               wasmtime
+              haskell-language-server
             ]
             ++ (with self'.packages; [
               miden
